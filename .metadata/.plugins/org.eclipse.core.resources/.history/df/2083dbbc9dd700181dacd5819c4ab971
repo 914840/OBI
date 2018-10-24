@@ -1,0 +1,24 @@
+package homework.zadanie3;
+
+public class Airplane {
+	// TODO Zastanowić się nad rozbiciem na klase samolot i klase miejsce.
+
+	private static int maxSeats; // ilosc bezwzględna miesca dla pasażerów
+	private static int freeSeats; // wolne miejsca pasażerskie
+	private static int busySeats;// zajęte miejsca pasażerskie
+	private static int maxSeatsPremium; // ilosc bezwzględna miesca dla pasażerów Premium
+	private static int freeSeatsPremium; // wolne miejsca pasażerskie premium
+	private static int busySeatsPremium;// zajęte miejsca pasażerskie premium
+	private static double maxLoad; // Max Waga wszystkich bagaży
+
+	public Airplane(int maxSeats, int freeSeats, int busySeats, int maxSeatsPremium, int freeSeatsPremium,
+			int busySeatsPremium, double maxLoad) {
+		Airplane.maxSeats = maxSeats;
+		Airplane.freeSeats = freeSeats;
+		Airplane.busySeats = busySeats;
+		Airplane.maxSeatsPremium = maxSeatsPremium;
+		Airplane.freeSeatsPremium = freeSeatsPremium;
+		Airplane.busySeatsPremium = busySeatsPremium;
+		Airplane.maxLoad = maxLoad;
+	}
+}

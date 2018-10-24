@@ -1,0 +1,10 @@
+package homework.zadanie3;
+
+public class Airplane {
+	private static int seats; // ilosc bezwzględna miesca dla pasażerów
+	private int freeSeats; // wolne miejsca pasażerskie
+	private int busySeays; // zajęte miejsca pasażerskie
+	private static int flightNumber; // numer lotu
+	private static double maxLoad; // Max Waga wszystkich bagaży
+
+}

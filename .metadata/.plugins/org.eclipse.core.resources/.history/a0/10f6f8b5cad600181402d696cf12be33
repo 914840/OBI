@@ -1,0 +1,25 @@
+package homework.zad2;
+
+// Deklaracja klasy; nazwa klasy jest taka sama jak nazwa pliku
+public class Klamka {
+	
+	//pole prywatne klasy typu boolean zainicjowane wartością false
+	private boolean czyKluczyk = false;
+
+	//metoda publiczna zwracająca wartość pola czyKluczyk- typ boolean, metoda bezparametrowa
+	public boolean isCzyKluczyk() {
+		return czyKluczyk;
+	}
+	//metoda publiczna tzw seter nie zwracający żadnej wartości a przypisujący do istniejącego pola czyKluczyk wartość
+	// podaną jako argunment metody - argument typu boolean
+	public void setCzyKluczyk(boolean czyKluczyk) {
+		//odwołanie do pola klasy Klamka o nazwie czyKluczyk i ustawienie wartości na podanej w argumencie metody
+		this.czyKluczyk = czyKluczyk;
+	}
+	//metoda publiczna zwracająca wartośc typu String nie przyjmująca żadne argumentu. 
+	public String stan() {
+		//zwraca wartość String "z kluczem" jeżeli test czyKluczyk zakonczy sie pozytywnie
+		// lub zwraca String "bez Klucza" jeżeli test wypadnie negatywnie. 
+		return czyKluczyk ? "z kluczem": "bez klucza";
+	}
+}

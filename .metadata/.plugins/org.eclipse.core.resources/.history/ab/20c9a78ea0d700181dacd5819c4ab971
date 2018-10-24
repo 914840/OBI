@@ -1,0 +1,68 @@
+package homework.zadanie3;
+
+import java.util.Scanner;
+
+public class Reservation {
+
+	public static void intro() {
+		System.out.println("Program do rezerwacji biletów lotniczych");
+	}
+	
+	public static int takeFlight() 
+	{
+		Scanner scLot = new Scanner(System.in);
+		int nr = scLot.nextInt();
+		return nr;
+	}
+	public static String addName() {
+		@SuppressWarnings("resource")
+		Scanner name1 = new Scanner(System.in);
+		String n = name1.next();
+		return n;
+	}
+
+	public static boolean addIsAdult() {
+		Scanner adult = new Scanner(System.in);
+		String isAdult = adult.nextLine();
+		boolean a = false;
+		if (isAdult == "nie") { a = true; }
+		return a;
+	}
+	
+	public static boolean addIsBaggage() {
+		Scanner baggage = new Scanner(System.in);
+		String isBaggage = baggage.nextLine();
+		boolean b = false;
+		if (isBaggage == "tak") { b = true; }
+		return b;
+	}
+	public static long addPhoneNumber() {
+		Scanner nr = new Scanner(System.in);
+		long phone = nr.nextLong();
+		return phone;
+	}
+	public static String addAddress() {
+		Scanner adr = new Scanner(System.in);
+		String a = adr.nextLine();
+		return a;
+	}
+	public static void seatClass() {
+		System.out.println("Wybierz klase:      ");
+		System.out.println("   2. Ekonomiczna");		
+		System.out.println("   1. Premium");
+		System.out.println("Podaj Klase: ");
+	}
+	public static int flClass() {
+		Scanner a = new Scanner(System.in);
+		int fl = a.nextInt();
+		return fl;
+	}
+	public static void seatPlace() {
+		System.out.println("Czy miejsce ma być przy oknie (tak/nie)? ");
+	}
+	/**
+	public static double priceCalc(int ee) {
+			
+		}
+	**/
+}

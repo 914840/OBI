@@ -1,0 +1,9 @@
+package homework.zadanie3;
+
+public class Ticket {
+	
+	private Passenger passenger;
+	private Seat seat;
+	private static int bookingNumber;
+	private Flight[] flight;
+}

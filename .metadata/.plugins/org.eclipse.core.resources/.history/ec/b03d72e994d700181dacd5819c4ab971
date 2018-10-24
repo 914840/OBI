@@ -1,0 +1,41 @@
+package homework.zadanie3;
+
+import java.util.Scanner;
+
+public class Reservation {
+
+	public static void intro() {
+		System.out.println("Program do rezerwacji biletów lotniczych");
+	}
+	
+	public static int takeFlight() 
+	{
+		System.out.println("Podaj nr lotu: ");
+		Scanner scLot = new Scanner(System.in);
+		int nr = scLot.nextInt();
+		return nr;
+	}
+	public static String addName() {
+		@SuppressWarnings("resource")
+		Scanner name1 = new Scanner(System.in);
+		String n = name1.next();
+		return n;
+	}
+
+	public static boolean addIsAdult() {
+		Scanner adult = new Scanner(System.in);
+		String isAdult = adult.nextLine();
+		boolean a = false;
+		if (isAdult == "nie") { a = true; }
+		return a;
+	}
+	
+	public static boolean addIsBaggage() {
+		Scanner baggage = new Scanner(System.in);
+		String isBaggage = baggage.nextLine();
+		boolean b = false;
+		if (isBaggage == "tak") { b = true; }
+		return b;
+	}
+	
+}

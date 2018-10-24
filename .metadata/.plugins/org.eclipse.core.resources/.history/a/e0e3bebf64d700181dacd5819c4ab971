@@ -1,0 +1,29 @@
+package homework.zadanie3;
+
+import java.time.LocalDate;
+
+public class Flight {
+	// TODO Kiedys tam dodac klase lotnisko
+
+	private int flightNumber; // Numer lotu
+	private LocalDate flightExit; // data wylotu
+	private LocalDate flightArrival; // data przylotu
+	private String flightExitPlace; // miejsce wylotu
+	private String flightArrivalPlace; // miejsce przylotu
+	private Airplane airplane; // samolot ogarniający lot
+	private static double PRICE = 200.00;
+
+	public Flight(int flightNumber, LocalDate flightExit, LocalDate flightArrival, String flightExitPlace,
+			String flightArrivalPlace, Airplane airplane) {
+		this.flightNumber = flightNumber;
+		this.flightExit = flightExit;
+		this.flightArrival = flightArrival;
+		this.flightExitPlace = flightExitPlace;
+		this.flightArrivalPlace = flightArrivalPlace;
+		this.airplane = airplane;
+	}
+	
+	public static double getPRICE() {
+		return Flight.PRICE;
+	}
+}

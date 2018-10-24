@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="homework.zadanie1.Date"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Seat"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Airplane"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Flight"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Test"/>
+<fullyQualifiedTypeName name="java.time.LocalTime"/>
+<fullyQualifiedTypeName name="java.io.Console"/>
+<fullyQualifiedTypeName name="java.lang.Runtime"/>
+<fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
+<fullyQualifiedTypeName name="java.lang.Readable"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Passenger"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="homework.zadanie3.Reservation"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

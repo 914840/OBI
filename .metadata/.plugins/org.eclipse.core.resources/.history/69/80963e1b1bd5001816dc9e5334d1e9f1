@@ -1,0 +1,26 @@
+package homework.zadanie3;
+
+public class Seat {
+	
+	private static int seatNo; // numer miejsca
+	private boolean isNearWindow;	// miejsce przy oknie
+	private boolean isPremium;	// czy lepsza klasa miejsca
+	
+	
+	public Seat( boolean isNearWindow, boolean isPremium ) {
+		// TODO pomyśleć o mechanizmie do nadawania numeru miejsca w zależności od tego czy przy oknie czy premium
+		Seat.seatNo++;
+		this.isNearWindow = isNearWindow;
+		this.isPremium = isPremium;
+	}
+	
+	public double cost() {
+		double cost = Flight.getPRICE();
+		if(this.isNearWindow) {
+			
+			if(this.isPremium) {
+			
+			}
+		return
+	}
+}

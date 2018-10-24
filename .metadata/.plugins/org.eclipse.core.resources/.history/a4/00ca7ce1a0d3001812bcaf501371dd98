@@ -1,0 +1,6 @@
+package homework.zadanie3;
+
+public class Lot {
+	private int flightNumber;
+	private 
+}

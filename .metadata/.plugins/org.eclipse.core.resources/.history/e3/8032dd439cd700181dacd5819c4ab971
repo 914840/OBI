@@ -1,0 +1,67 @@
+package homework.zadanie3;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Flight {
+	// TODO Kiedys tam dodac klase lotnisko
+
+	private int flightNumber; // Numer lotu
+	private LocalDate flightExit; // data wylotu
+	private LocalDate flightArrival; // data przylotu
+	private LocalTime flightStart; // godzina wylotu
+	private LocalTime flightEnd; // godzina przylotu
+	private String flightExitPlace; // miejsce wylotu
+	private String flightArrivalPlace; // miejsce przylotu
+	private Airplane airplane; // samolot ogarniający lot
+	private static double PRICE = 200.00;
+
+	public Flight(int flightNumber, LocalDate flightExit, LocalTime flightStart, LocalDate flightArrival, LocalTime flightEnd, String flightExitPlace,
+			String flightArrivalPlace, Airplane airplane) {
+		this.flightNumber = flightNumber;
+		this.flightExit = flightExit;
+		this.flightStart = flightStart;
+		this.flightArrival = flightArrival;
+		this.flightEnd = flightEnd;
+		this.flightExitPlace = flightExitPlace;
+		this.flightArrivalPlace = flightArrivalPlace;
+		this.airplane = airplane;
+	}
+	
+	public double getPRICE() {
+		return price;
+	}
+
+	public int getFlightNumber() {
+		return flightNumber;
+	}
+
+	public LocalDate getFlightExit() {
+		return flightExit;
+	}
+
+	public LocalDate getFlightArrival() {
+		return flightArrival;
+	}
+
+	public LocalTime getFlightStart() {
+		return flightStart;
+	}
+
+	public LocalTime getFlightEnd() {
+		return flightEnd;
+	}
+
+	public String getFlightExitPlace() {
+		return flightExitPlace;
+	}
+
+	public String getFlightArrivalPlace() {
+		return flightArrivalPlace;
+	}
+
+	public Airplane getAirplane() {
+		return airplane;
+	}
+	
+}

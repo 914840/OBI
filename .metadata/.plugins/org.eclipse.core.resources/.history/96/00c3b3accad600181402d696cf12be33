@@ -1,0 +1,89 @@
+package homework.zad2;
+
+// deklaracja Klasy publicznej Skrzydlo 
+public class Skrzydlo {
+	private int dlugosc; // pole klasy prywatne typu int
+	private int wysokosc;// pole klasy prywatne typu int
+	private Klamka klamka;// pole klasy prywatne typu Klamka - objekt klasy
+	private boolean otwarte = false;// pole klasy prywatne typu boolean zainicjowane wartością false
+
+	// konstruktor publiczny klasy Skrzydlo o argumentach dlugosc wysokosc typu int
+	public Skrzydlo(int dlugosc, int wysokosc) {
+		// konstruktor ustawia wartosc pol klasy na wartosci podane w argumentach
+		// konstruktora
+		this.dlugosc = dlugosc;
+		this.wysokosc = wysokosc;
+	}
+
+	// konstruktor publiczny klasy Skrzydlo o argumentach dlugosc wysokosc typu int
+	// oraz klamka typu Klamka
+	public Skrzydlo(int dlugosc, int wysokosc, Klamka klamka) {
+		// konstruktor ustawia wartosc pol klasy na wartosci podane w argumentach
+		// konstruktora
+		this(dlugosc, wysokosc);
+		// konstruktor przekazuje objekt klamka jako wartosc pola klamka w klasie
+		// Skrzydlo
+		this.klamka = klamka;
+	}
+
+	// publiczna metoda getter zwracająca wartosc pola klasy dlugosc typu int
+	public int getDlugosc() {
+		return dlugosc;
+	}
+
+	// publiczna metoda setter - ustawia wartosc pola klasy dlugosc na wartosc
+	// argumentu podanego w metodzie
+	public void setDlugosc(int dlugosc) {
+		this.dlugosc = dlugosc;
+	}
+
+	// metoda publiczna getter zwracająca wartość pola wysokość typu int
+	public int getWysokosc() {
+		return wysokosc;
+	}
+
+	// publiczna metoda setter - ustawia wartosc pola klasy wysokosc na wartosc
+	// argumentu podanego w metodzie
+	public void setWysokosc(int wysokosc) {
+		this.wysokosc = wysokosc;
+	}
+
+	//metoda publiczna getter zwracająca typ obiektowy Klamka 
+	public Klamka getKlamka() {
+		return klamka;
+	}
+
+	// publiczna metoda setter - ustawia wartosc pola klasy Klamka na wartosc
+	// argumentu podanego w metodzie - typu obiektowego
+	public void setKlamka(Klamka klamka) {
+		this.klamka = klamka;
+	}
+
+	// metoda puliczna zwracająca wartość boolean pola klasy otwarte, metoda
+	// bezargumentowa
+	public boolean isOtwarte() {
+		return otwarte;
+	}
+
+	// metoda publiczna setter przypisująca wartosc pola klasy typu boolean na
+	// wartosc argumentu metody otwarte
+	public void setOtwarte(boolean otwarte) {
+		this.otwarte = otwarte;
+	}
+
+	// metoda publiczna zwracająca typ String bezargumentowa
+	public String stan() {
+		String wymiary = dlugosc + "x" + wysokosc; // metoda tworzy String z pola klasy dlugosc znaku "x" oraz pola
+													// wysokosc
+		String otwarcie = otwarte ? "otwarte" : "zamkniete";// test wartośći pola klasy otwarte => jeśli ma wartość true
+															// to zapisuje w String otwarcie "Otwarte" jesli false to
+															// "zamkniete"
+		String stanKlamki = klamka != null ? klamka.stan() : "bez klamki"; // test wartości pola klasy 'klamka' jeśli
+																			// jest inne niż null(posiada referencje do
+																			// obiektu typu klamka) wtedy wywołuje
+																			// metode stan dla obiekty klamka, jeżeli
+																			// referencja jest null to String ma wartość
+																			// "bez klamki"
+		return wymiary + " " + otwarcie + " " + stanKlamki;
+	}
+}

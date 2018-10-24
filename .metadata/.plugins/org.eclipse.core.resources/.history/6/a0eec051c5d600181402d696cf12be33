@@ -1,0 +1,56 @@
+package homework.zad2;
+
+// deklaracja Klasy publicznej Skrzydlo 
+public class Skrzydlo {
+	private int dlugosc; // pole klasy prywatne typu int
+	private int wysokosc;// pole klasy prywatne typu int
+	private Klamka klamka;// pole klasy prywatne typu Klamka - objekt klasy
+	private boolean otwarte = false;// pole klasy prywatne typu boolean zainicjowane wartością false
+
+	// konstruktor publiczny klasy Skrzydlo o argumentach dlugosc wysokosc typu int
+	public Skrzydlo(int dlugosc, int wysokosc) {
+		// konstruktor ustawia wartosc pol klasy na wartosci podane w argumentach konstruktora
+		this.dlugosc = dlugosc;
+		this.wysokosc = wysokosc;
+	}
+	
+	// konstruktor publiczny klasy Skrzydlo o argumentach dlugosc wysokosc typu int oraz klamka typu Klamka
+	public Skrzydlo(int dlugosc, int wysokosc, Klamka klamka) {
+		// konstruktor ustawia wartosc pol klasy na wartosci podane w argumentach konstruktora
+		this(dlugosc,wysokosc);
+		// konstruktor przekazuje objekt klamka jako wartosc pola klamka w klasie Skrzydlo
+		this.klamka = klamka; 
+	}
+
+	// publiczna metoda getter zwracająca wartosc pola klasy dlugosc typu int
+	public int getDlugosc() {
+		return dlugosc;
+	}
+	public void setDlugosc(int dlugosc) {
+		this.dlugosc = dlugosc;
+	}
+	public int getWysokosc() {
+		return wysokosc;
+	}
+	public void setWysokosc(int wysokosc) {
+		this.wysokosc = wysokosc;
+	}
+	public Klamka getKlamka() {
+		return klamka;
+	}
+	public void setKlamka(Klamka klamka) {
+		this.klamka = klamka;
+	}
+	public boolean isOtwarte() {
+		return otwarte;
+	}
+	public void setOtwarte(boolean otwarte) {
+		this.otwarte = otwarte;
+	}
+	public String stan() {
+		String wymiary = dlugosc+"x"+wysokosc;
+		String otwarcie = otwarte ? "otwarte" : "zamkniete";
+		String stanKlamki = klamka!= null ? klamka.stan() : "bez klamki";
+		return wymiary  +" "+ otwarcie +" "+ stanKlamki;
+	}
+}

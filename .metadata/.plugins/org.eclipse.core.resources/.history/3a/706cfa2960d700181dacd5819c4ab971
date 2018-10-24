@@ -1,0 +1,39 @@
+package homework.zad2;
+
+//publiczna klasa Test zawierająca main - metode wykonawczą programu 
+public class Test {
+	// metoda publiczna statyczna main tzn główna pętal programu
+	public static void main(String[] args) {
+
+		// Obiekt okno1 typu Okna do którego utworzony i przypisany zostaje okiekt klasy
+		// Okno poprzez konstruktor bezargumentowy
+		Okno okno1 = new Okno();
+		// Obiekt okno2 typu Okno do którego utworzony i przypisany zostaje obiekt klasy
+		// Okno poprzez konstruktor z trzema argumentami tyhpu int
+		Okno okno2 = new Okno(1800, 1800, 3);
+
+		okno1.otworz(); // wywołuje metodę otwórz bez argumentu do obiektu klasy okon - okno1
+		okno2.otworz(0); // wywołuje metodę otwórz z argumentem 0 dla obiektu klasy okno - okno2
+		okno2.otworz(2); // wywoluje metodę otwórz z argumenrtem 2 dla obiektu klasy Okno - okno2
+
+		okno1.wypiszStan(); // dla okno1 wywoluje metodę wypiszStan bez argumentu
+		okno2.wypiszStan(); // dla okno2 wywoluje metodę wypiszStan bez argumentu
+
+		okno1.zamknij();// dla okno1 wywoluje metodę zamknij bez argumentu
+		okno2.setDlugosc(2100); // dla okno2 wywoluje metodę setDlugosc z argumentem 2100
+		okno2.zamknij(0); // dla okno2 wywoluje metodę zamknij z argumentem 0
+		Klamka kl = new Klamka(); // deklaracja obiektu klamka do którego przypisany jest nowy obiekt typu klamka
+									// (kostruktor domyslny)
+		kl.setCzyKluczyk(true);// wywołanie metody setCzyKluczyk dla obiektu kl typu klamka z argumentem true
+		okno2.getSkrzydla()[1].setKlamka(kl); // dla obiektu okno2 wywołanie metody getSkrzydla() dla elementu [1]
+												// tablicy Skrzydlo - obiektu okno2 wywołanie motody setKlamka z
+												// argumentem kl
+		okno2.getSkrzydla()[2].setKlamka(null); // dla obiektu okno2 wywołanie metody getSkrzydla() dla elementu [2]
+												// tablicy Skrzydlo - obiektu okno2 wywołanie motody setKlamka z
+												// argumentem null
+
+		okno1.wypiszStan();
+		okno2.wypiszStan();
+
+	}
+}

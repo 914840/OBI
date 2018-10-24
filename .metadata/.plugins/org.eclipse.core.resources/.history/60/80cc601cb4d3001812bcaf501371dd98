@@ -1,0 +1,8 @@
+package homework.zadanie3;
+
+public class Seat {
+	
+	private int SeatNo; // numer miejsca
+	private boolean isNearWindow;	// miejsce przy oknie
+	private boolean isPremium;	// czy lepsza klasa miejsca
+}

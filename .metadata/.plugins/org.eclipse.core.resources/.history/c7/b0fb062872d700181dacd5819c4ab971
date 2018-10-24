@@ -1,0 +1,17 @@
+package homework.zadanie3;
+
+public class Ticket {
+	
+	private Passenger passenger;
+	private Seat seat;
+	private static int bookingNumber;
+	private Flight flight;
+	
+	public void setFlight(Flight flight) {
+		this.flight = flight;
+	}
+	public Flight[] getFlight() {
+		return flight;
+	}
+}
+	

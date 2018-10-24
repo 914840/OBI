@@ -1,0 +1,10 @@
+package homework.zadanie3;
+
+public class Passenger {
+	private String fullName; // imie i nazwisko
+	private boolean isAdult; // czy dorosły
+	private boolean isLuggage; // czy posiada bagaż
+	private int phoneNumber; // numer telefonu kontaktowy
+	private String address; // adres zamieszkania
+
+}

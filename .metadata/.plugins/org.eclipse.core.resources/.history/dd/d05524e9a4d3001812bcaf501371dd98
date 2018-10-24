@@ -1,0 +1,10 @@
+package homework.zadanie3;
+
+public class Flight {
+	private static int flightNumber; // Numer lotu
+	private Data flightExit;	// data wylotu
+	private Data flightArrival;	// data przylotu
+	private String flightExitPlace;	// miejsce wylotu
+	private String flightArrivalPlace; // miejsce przylotu
+	private Airplan airplan;	// samolot ogarniający lot
+}

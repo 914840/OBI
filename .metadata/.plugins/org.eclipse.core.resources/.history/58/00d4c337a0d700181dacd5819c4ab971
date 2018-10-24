@@ -1,0 +1,81 @@
+package homework.zadanie3;
+
+public class Airplane {
+	// TODO Zastanowić się nad rozbiciem na klase samolot i klase miejsce.
+
+	private static int maxSeats; // ilosc bezwzględna miesca dla pasażerów
+	private static int freeSeats; // wolne miejsca pasażerskie
+	private static int busySeats;// zajęte miejsca pasażerskie
+	private static int maxSeatsPremium; // ilosc bezwzględna miesca dla pasażerów Premium
+	private static int freeSeatsPremium; // wolne miejsca pasażerskie premium
+	private static int busySeatsPremium;// zajęte miejsca pasażerskie premium
+	private static double maxLoad; // Max Waga wszystkich bagaży
+
+	public Airplane(int maxSeats, int freeSeats, int busySeats, int maxSeatsPremium, int freeSeatsPremium,
+			int busySeatsPremium, double maxLoad) {
+		Airplane.maxSeats = maxSeats;
+		Airplane.freeSeats = freeSeats;
+		Airplane.busySeats = busySeats;
+		Airplane.maxSeatsPremium = maxSeatsPremium;
+		Airplane.freeSeatsPremium = freeSeatsPremium;
+		Airplane.busySeatsPremium = busySeatsPremium;
+		Airplane.maxLoad = maxLoad;
+	}
+
+	public static int getMaxSeats() {
+		return maxSeats;
+	}
+
+	public static void setMaxSeats(int maxSeats) {
+		Airplane.maxSeats = maxSeats;
+	}
+
+	public static int getFreeSeats() {
+		return freeSeats;
+	}
+
+	public static void setFreeSeats(int freeSeats) {
+		Airplane.freeSeats = freeSeats;
+	}
+
+	public static int getBusySeats() {
+		return busySeats;
+	}
+
+	public static void setBusySeats(int busySeats) {
+		Airplane.busySeats = busySeats;
+	}
+
+	public static int getMaxSeatsPremium() {
+		return maxSeatsPremium;
+	}
+
+	public static void setMaxSeatsPremium(int maxSeatsPremium) {
+		Airplane.maxSeatsPremium = maxSeatsPremium;
+	}
+
+	public static int getFreeSeatsPremium() {
+		return freeSeatsPremium;
+	}
+
+	public static void setFreeSeatsPremium(int freeSeatsPremium) {
+		Airplane.freeSeatsPremium = freeSeatsPremium;
+	}
+
+	public static int getBusySeatsPremium() {
+		return busySeatsPremium;
+	}
+
+	public static void setBusySeatsPremium(int busySeatsPremium) {
+		Airplane.busySeatsPremium = busySeatsPremium;
+	}
+
+	public static double getMaxLoad() {
+		return maxLoad;
+	}
+
+	public static void setMaxLoad(double maxLoad) {
+		Airplane.maxLoad = maxLoad;
+	}
+	
+}

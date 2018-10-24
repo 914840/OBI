@@ -1,0 +1,130 @@
+package homework.zad2;
+
+//deklaracja klasy publicznej Okno - nazwa ta sama co nazwa pliku
+public class Okno {
+	// pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int dlugosc;
+	// pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int wysokosc;
+	// pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int liczbaSkrzydel;
+	// pole prywatne klasy Okno typu tablicy obiektów klasy Skrzydło z domyślną
+	// wartościa 0 o nazwie skrzydla;
+	private Skrzydlo[] skrzydla;
+
+	// Publiczny konstruktor klasy Okno przyjmujący argumenty int d,w,lSkrzydel
+	public Okno(int d, int w, int lSkrzydel) {
+		// przypisanie do prywatnego pola klasy int dlugosc wartości argumentu d
+		dlugosc = d;
+		// przypisanie do prywatnego pola klasy int wysokość wartości argumentu w
+		wysokosc = w;
+		// analogicznie do poprzednich przypadków
+		liczbaSkrzydel = lSkrzydel;
+		// przypisanie do pola skrzydla(tab obj typu Skrzydlo) nowej tablicy
+		// zainicjalizowanej wartością argumentu lSkrzydel
+		skrzydla = new Skrzydlo[lSkrzydel];
+		// pętla wykonują*************************************8
+		for (int i = 0; i < lSkrzydel; i++) {
+			skrzydla[i] = new Skrzydlo(d / lSkrzydel, w, new Klamka());
+		}
+	}
+
+	// konstruktor klasy Okno
+	public Okno(int d, int w, Skrzydlo[] sk) {
+		dlugosc = d;
+		wysokosc = w;
+		liczbaSkrzydel = sk.length;
+		skrzydla = sk;
+	}
+
+	public Okno(int d, int w) {
+		this(d, w, 1);
+	}
+
+	// Konstruktor bezargumentowy klasy Okno
+	public Okno() {
+		this(1200, 1500, 1); // wywołanie konstruktor publicznego Okon(d, w,lSkrzydel)
+	}
+
+	public int getDlugosc() {
+		return dlugosc;
+	}
+
+	public void setDlugosc(int dlugosc) {
+		this.dlugosc = dlugosc;
+		for (int i = 0; i < liczbaSkrzydel; i++) {
+			skrzydla[i].setDlugosc(dlugosc / liczbaSkrzydel);
+		}
+	}
+
+	// getter wartości pola klasy wysokosc - zwraca wartość
+	public int getWysokosc() {
+		return wysokosc;
+	}
+
+	// setter wartości pola klasy wysokosc - przypisuje polu wartość podaną w
+	// argumencie metody.
+	public void setWysokosc(int wysokosc) {
+		this.wysokosc = wysokosc;
+		for (int i = 0; i < liczbaSkrzydel; i++) { // pętla przypisująca każdemu z tablicy "i" skrzydeł wartość pola
+													// wysokosc
+			skrzydla[i].setWysokosc(wysokosc);
+		}
+	}
+
+	// getter publiczny liczbaSkrzydel - zwraca wartość liczby skrzydeł typu int
+	public int getLiczbaSkrzydel() {
+		return liczbaSkrzydel;
+	}
+
+	// getter wartosci pola klasy skrzydla - zwróconej jako wartosc tablicy
+	// Skrzydlo[]
+	public Skrzydlo[] getSkrzydla() {
+		return skrzydla;
+	}
+
+	// metoda publiczna bezzwrotna i bezargumentowa
+	public void otworz() {
+		for (int i = 0; i < liczbaSkrzydel; i++) { // pętla: dla kazdego elementu tablicy Skrzydla = i, i< od wartości
+													// liczbaSkrzydel zwraca argument typu boolean metody setOtwarte -
+													// argument true.
+			skrzydla[i].setOtwarte(true);
+		}
+	}
+
+	// metoda puliczna bezzwrotna o argumencie typu int
+
+	public void otworz(int nrSkrzydla) {
+		if (nrSkrzydla > skrzydla.length) // jeśli nrSkrzydla jest większe od dlugosci tablicy skrzydla metoda ie
+											// wykonuje dalszej instrukcji
+			return;
+
+		skrzydla[nrSkrzydla].setOtwarte(true); // tablica skrzydla elementów nrSkrzydla dla każdego elementu wywoluje
+												// metode setOtwarte z argumentem typu boolean true
+
+	}
+
+	public void zamknij() {
+		for (int i = 0; i < liczbaSkrzydel; i++) {
+			skrzydla[i].setOtwarte(false);
+		}
+	}
+
+	public void zamknij(int nrSkrzydla) {
+		if (nrSkrzydla > skrzydla.length)
+			return;
+
+		skrzydla[nrSkrzydla].setOtwarte(false);
+
+	}
+
+	public void wypiszStan() {
+		String tekst = "";
+		for (int i = 0; i < liczbaSkrzydel; i++) {
+			tekst += "[" + skrzydla[i].stan() + "]";
+		}
+		System.out.println(tekst);
+
+	}
+
+}

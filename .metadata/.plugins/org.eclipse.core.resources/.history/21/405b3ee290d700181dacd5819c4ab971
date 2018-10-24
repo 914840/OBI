@@ -1,0 +1,27 @@
+package homework.zadanie3;
+
+import java.util.Scanner;
+
+public class Reservation {
+
+	public static void intro() {
+		System.out.println("Program do rezerwacji biletów lotniczych");
+	}
+	
+	public static int takeFlight() 
+	{
+		System.out.println("Podaj nr lotu: ");
+		Scanner scLot = new Scanner(System.in);
+		int nr = scLot.nextInt();
+		scLot.close();;
+		return nr;
+	}
+	public static String addName() {
+		
+		System.out.println("Podaj Imie i Nazwisko: ");
+		Scanner name = new Scanner(System.in);
+		//String str = name.nextLine();
+		name.close();
+		return " ";
+	}
+}

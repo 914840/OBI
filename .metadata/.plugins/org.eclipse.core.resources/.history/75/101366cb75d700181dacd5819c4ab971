@@ -1,0 +1,23 @@
+package homework.zadanie3;
+
+public class Passenger {
+	private String fullName; // imie i nazwisko
+	private boolean isAdult; // czy dorosły
+	private boolean isLuggage; // czy posiada bagaż
+	private long phoneNumber; // numer telefonu kontaktowy
+	private String address; // adres zamieszkania
+	//private Luggage luggage;
+
+	public Passenger(String fullName, boolean isAdult, boolean isLuggage, long phoneNumber, String address) {
+		this.fullName = fullName;
+		this.isAdult = isAdult;
+		this.isLuggage = isLuggage;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+	}
+	public String showFlight(Flight flight) {
+		String start = "Lot nr: " + flight.getFlightNumber() +", data: " + flight.getFlightExit() + ", godzina odlotu: " +flight.getFlightStart() + ", z: "+ flight.getFlightExitPlace();
+		String end = " -> " + flight.getFlightArrivalPlace() + ", data: " + flight.getFlightExit() + ", godz przylotu: " + flight.getFlightEnd();
+		return start + end;
+	}
+}

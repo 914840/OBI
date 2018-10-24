@@ -1,0 +1,120 @@
+package homework.zadanie3;
+
+import java.io.Console;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Metoda Main Klasy Test do zrobienia test rezerwacji
+
+		/**
+		 * tworzenie warunków testowych 1. tworzymy samolot 2. tworzymy połączenie
+		 * a)data wylotu b))data przylotu c)godzina wylotu d)godzina przylotu
+		 * 
+		 */
+		Airplane airplane1 = new Airplane(60, 50, 10, 20, 18, 2, 3000);
+		Airplane airplane2 = new Airplane(10,5,5,2,2,0,200);
+		LocalDate exit1 = LocalDate.of(2018, 9, 28);
+		LocalDate arrival1 = LocalDate.of(2018, 9, 28);
+		LocalTime start1 = LocalTime.of(11, 30);
+		LocalTime start2 = LocalTime.of(12, 00);
+		LocalTime end1 = LocalTime.of(14, 00);
+		final Flight fl1 = new Flight(5510, exit1, start1, arrival1, end1, "Warszawa(WAW)", "Praga(PRG)", airplane1);
+		final Flight fl2 = new Flight(6620, exit1, start2, arrival1, end1, "Warszawa(WAW)", "Wrocław(WRC)", airplane2);
+
+		Passenger pass1 = new Passenger();
+		//Passenger pass1 = new Passenger("Tymorek Maciej", true, true, 660547074, "05-555 Tarczyn, ul. Piękna 38");
+		// Luggage w20kg = new Luggage(20.00);
+		Reservation.intro();
+		System.out.println(pass1.showFlight(fl1));
+		System.out.println(pass1.showFlight(fl2));
+		//Reservation.takeFlight();
+		if(Reservation.takeFlight() == fl1.getFlightNumber()) {
+			System.out.println(" ");
+			System.out.println("Rezerwacja Miejsce:");
+			System.out.println("   " + pass1.showFlight(fl1));
+		}
+		else {
+			System.out.println(" ");
+			System.out.println("Rezerwacja Miejsce:");
+			System.out.println("   " + pass1.showFlight(fl2));
+		}
+		addName(pass1);
+	}
+
+
+
+	
+	/**
+	public final static void clearConsole() 
+	{
+		try 
+			{
+				final String os = System.getProperty("os.name");
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+				if (os.contains("Windows"))
+				{
+					Runtime.getRuntime().exec("cls");
+				}
+				else
+				{
+					Runtime.getRuntime().exec("clear");
+
+				}
+				String x = new Scanner(System.in).nextLine();
+			}
+		catch (final Exception e)
+		{
+			// miejsce na obsługę wyjątku
+		}
+		
+		String x = new Scanner(System.in).nextLine();
+	}
+	**/
+	
+	
+	public static String addName() {
+		
+		System.out.println("Podaj Imie i Nazwisko: ");
+		Scanner name = new Scanner(System.in);
+		return name.toString();
+		
+		//name.close();
+		/**
+		System.out.println("Czy jesteś osobą dorosłą (tak/nie)? ");
+		Scanner adult = new Scanner(System.in);
+		adult.close();
+		String isAdult = adult.nextLine();
+		boolean a = false;
+		if (isAdult == "nie") { a = true; }
+		
+		System.out.println("Czy masz bagaż poza bagażem podręcznym (tak/nie)? ");
+		Scanner baggage = new Scanner(System.in);
+		baggage.close();
+		baggage.nextLine() = String isBaggage;
+		boolean b = false;
+		if (isBaggage == "tak") { b = true; } 
+		
+		System.out.println("Podaj nr telefonu: ");
+		Scanner nr = new Scanner(System.in);
+		long phone = nr.nextLong();
+		
+		System.out.println("Podaj Adress (kod Pocztowy, Miejscowość, ulica, nr domu): ");
+		Scanner adr = new Scanner(System.in);
+		String address = adr.nextLine();
+		
+		Passenger pass1 = new Passenger(n, a, b, phone, address);
+		**/
+	}
+	
+	public static void selectClass( Flight fl) {
+		
+		System.out.println("Czy miejsce w klasie Ekonomicznej? (tak/nie):");
+		Scanner scanner = new Scanner(System.in);
+		String eco = scanner.nextLine();
+	}
+
+}

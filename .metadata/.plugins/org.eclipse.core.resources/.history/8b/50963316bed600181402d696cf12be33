@@ -1,0 +1,101 @@
+package homework.zad2;
+
+//deklaracja klasy publicznej Okno - nazwa ta sama co nazwa pliku
+public class Okno {
+	//pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int dlugosc;
+	//pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int wysokosc;
+	//pole prywatne klasy Okno typu int z domyślną wartościa 0;
+	private int liczbaSkrzydel;
+	//pole prywatne klasy Okno typu tablicy obiektów klasy Skrzydło z domyślną wartościa 0 o nazwie skrzydla;
+	private Skrzydlo[] skrzydla;
+	
+	//Publiczny konstruktor klasy Okno przyjmujący argumenty int d,w,lSkrzydel
+	public Okno(int d, int w, int lSkrzydel){
+		//przypisanie do prywatnego pola klasy int dlugosc wartości argumentu d
+		dlugosc = d;
+		//przypisanie do prywatnego pola klasy int wysokość wartości argumentu w
+		wysokosc = w;
+		//analogicznie do poprzednich przypadków
+		liczbaSkrzydel = lSkrzydel;
+		//przypisanie do pola skrzydla(tab obj typu Skrzydlo) nowej tablicy zainicjalizowanej wartością argumentu lSkrzydel
+		skrzydla = new Skrzydlo[lSkrzydel];
+		//pętla wykonują*************************************8
+		for(int i=0;i<lSkrzydel;i++){
+			skrzydla[i] = new Skrzydlo(d/lSkrzydel,w, new Klamka());
+		}
+	}
+	//konstruktor klasy Okno 
+	public Okno(int d, int w, Skrzydlo[] sk){
+		dlugosc = d;
+		wysokosc = w;
+		liczbaSkrzydel = sk.length;
+		skrzydla = sk;
+	}		
+	public Okno(int d, int w){
+		this(d,w,1);
+	}	
+	public Okno(){
+		this(1200,1500,1);
+	}
+	
+	public int getDlugosc() {
+		return dlugosc;
+	}
+	public void setDlugosc(int dlugosc) {
+		this.dlugosc = dlugosc;
+		for(int i=0;i<liczbaSkrzydel;i++){
+			skrzydla[i].setDlugosc(dlugosc/liczbaSkrzydel);
+		}
+	}
+	
+	public int getWysokosc() {
+		return wysokosc;
+	}
+	public void setWysokosc(int wysokosc) {
+		this.wysokosc = wysokosc;
+		for(int i=0;i<liczbaSkrzydel;i++){
+			skrzydla[i].setWysokosc(wysokosc);
+		}
+	}
+	
+	public int getLiczbaSkrzydel() {
+		return liczbaSkrzydel;
+	}
+	public Skrzydlo[] getSkrzydla() {
+		return skrzydla;
+	}
+
+	public void otworz(){
+		for(int i=0;i<liczbaSkrzydel;i++){
+			skrzydla[i].setOtwarte(true);
+		}
+	}
+	public void otworz(int nrSkrzydla){
+		if(nrSkrzydla > skrzydla.length) return;
+		
+		skrzydla[nrSkrzydla].setOtwarte(true);
+		
+	}
+	public void zamknij(){
+		for(int i=0;i<liczbaSkrzydel;i++){
+			skrzydla[i].setOtwarte(false);
+		}
+	}
+	public void zamknij(int nrSkrzydla){
+		if(nrSkrzydla > skrzydla.length) return;
+		
+		skrzydla[nrSkrzydla].setOtwarte(false);
+		
+	}
+	public void wypiszStan() {
+		String tekst = "";
+		for(int i=0;i<liczbaSkrzydel;i++){
+			tekst += "["+skrzydla[i].stan()+"]";
+		}
+		System.out.println(tekst);
+		
+	}
+	
+}
